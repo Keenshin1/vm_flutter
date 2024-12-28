@@ -9,7 +9,7 @@ import 'features/random_numbers/presentation/pages/home_page.dart';
 import 'package:vm_tecnologia/core/constants/app_strings.dart';
 
 void main() {
-  final api = RandomNumbersApiImpl();
+  final api = ExamApiImpl();
   final dataSource = RandomNumbersDataSource(api);
   final repository = NumbersRepositoryImpl(dataSource);
 

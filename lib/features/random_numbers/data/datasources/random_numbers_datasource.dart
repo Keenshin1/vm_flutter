@@ -1,7 +1,7 @@
 import 'package:random_numbers_api/random_numbers_api.dart';
 
 class RandomNumbersDataSource {
-  final RandomNumbersApi api;
+  final ExamApi api;
 
   RandomNumbersDataSource(this.api);
 

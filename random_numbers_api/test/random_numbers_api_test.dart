@@ -2,13 +2,13 @@ import 'package:test/test.dart';
 import 'package:random_numbers_api/random_numbers_api.dart';
 
 void main() {
-  late RandomNumbersApi api;
+  late ExamApi api;
 
   setUp(() {
-    api = RandomNumbersApiImpl();
+    api = ExamApiImpl();
   });
 
-  group('RandomNumbersApi Tests', () {
+  group('ExamApi Tests', () {
     test('getRandomNumbers deve retornar a quantidade correta', () {
       final result = api.getRandomNumbers(5);
       expect(result.length, 5);

@@ -2,13 +2,13 @@ library;
 
 import 'dart:math';
 
-abstract class RandomNumbersApi {
+abstract class ExamApi {
   List<int> getRandomNumbers(int quantity);
 
   bool checkOrder(List<int> numbers);
 }
 
-class RandomNumbersApiImpl implements RandomNumbersApi {
+class ExamApiImpl implements ExamApi {
   @override
   List<int> getRandomNumbers(int quantity) {
     if (quantity <= 0 || quantity > 1000) {
