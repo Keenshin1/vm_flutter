@@ -11,5 +11,5 @@ class AppConstants {
   static const double paddingPadrao = 16.0;
 
   // Duração de Animações
-  static const int duracaoAnimacaoMs = 300;
+  static const int duracaoAnimacaoMs = 200;
 }

@@ -4,6 +4,8 @@ import '../controllers/numbers_controller.dart';
 import 'package:vm_tecnologia/core/constants/app_strings.dart';
 import 'package:vm_tecnologia/core/constants/app_constants.dart';
 
+import '../widgets/reorderable_numbers_list.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -33,27 +35,10 @@ class HomePage extends StatelessWidget {
           return Column(
             children: [
               Expanded(
-                child: ReorderableListView.builder(
-                  itemCount: numberList.numbers.length,
+                child: ReorderableNumbersList(
+                  numbers: numberList.numbers,
                   onReorder: controller.reorderNumbers,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      key: ValueKey(numberList.numbers[index]),
-                      child: ListTile(
-                        title: Text(
-                          numberList.numbers[index].toString(),
-                          style: TextStyle(
-                            fontSize: AppConstants.tamanhoFonteGrande,
-                            color: numberList.isOrdered == true ? Colors.green : null,
-                          ),
-                        ),
-                        trailing: const Icon(
-                          Icons.drag_handle,
-                          color: Colors.grey,
-                        ),
-                      ),
-                    );
-                  },
+                  isOrdered: numberList.isOrdered,
                 ),
               ),
               Padding(
